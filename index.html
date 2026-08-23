@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unduli Senadheera — Mechanical Engineering Portfolio</title>
+<meta name="description" content="Unduli Senadheera — Mechanical Engineering undergraduate, Aeronautical Stream, University of Moratuwa. Aerodynamics, CAD, composites, and reverse engineering projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">U.S.</span>
+      <span class="brand-name">Unduli&nbsp;Senadheera</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">Profile</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="blueprint-grid" aria-hidden="true"></div>
+
+  <svg class="airfoil-svg" viewBox="0 0 1000 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <!-- reference frame lines -->
+    <line x1="60" y1="180" x2="940" y2="180" class="dim-line"></line>
+    <line x1="120" y1="60" x2="120" y2="300" class="dim-line dim-line--v"></line>
+    <!-- airfoil outline (stylised NACA-like profile) -->
+    <path class="airfoil-path" d="M 120,180
+             C 220,110 420,80 620,95
+             C 760,105 880,140 940,180
+             C 860,205 700,230 500,232
+             C 340,233 200,215 120,180 Z"></path>
+    <!-- camber / chord line -->
+    <line x1="120" y1="180" x2="940" y2="180" class="chord-line"></line>
+    <!-- station tick marks -->
+    <g class="ticks">
+      <line x1="260" y1="172" x2="260" y2="188"></line>
+      <line x1="440" y1="172" x2="440" y2="188"></line>
+      <line x1="620" y1="172" x2="620" y2="188"></line>
+      <line x1="800" y1="172" x2="800" y2="188"></line>
+    </g>
+    <text x="120" y="315" class="callout">STA 0.0</text>
+    <text x="900" y="315" class="callout" text-anchor="end">STA 1.0 — CHORD</text>
+  </svg>
+
+  <div class="hero-inner">
+    <p class="eyebrow">SHEET&nbsp;00 &nbsp;/&nbsp; TITLE &nbsp;/&nbsp; PORTFOLIO SET</p>
+    <h1 class="hero-name">Unduli<br>Senadheera</h1>
+    <p class="hero-role">Mechanical Engineering Undergraduate — Aeronautical Stream</p>
+    <p class="hero-tagline">I design, analyse, and build flight-worthy structures — from airfoil
+      selection and static-stability checks through to carbon-fibre layup on the shop floor.</p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="assets/docs/Unduli_Senadheera_CV.pdf" class="btn btn-outline" download>Download CV</a>
+      <a href="#contact" class="btn btn-text">Get in touch →</a>
+    </div>
+  </div>
+
+  <!-- Title block, drafting-sheet style -->
+  <div class="title-block">
+    <div class="tb-cell tb-cell--wide">
+      <span class="tb-label">Title</span>
+      <span class="tb-value">Unduli Senadheera — Engineering Portfolio</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Institution</span>
+      <span class="tb-value">University of Moratuwa</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Programme</span>
+      <span class="tb-value">BSc(Hons) Mech. Eng. — Aero</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">CGPA</span>
+      <span class="tb-value">3.91 <small>(Sem 1–4)</small></span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Rev.</span>
+      <span class="tb-value" id="tbYear">2026</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- ===== ABOUT / PROFILE ===== -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;01 — PROFILE</p>
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="photo-frame">
+          <img src="assets/img/profile-photo.jpg" alt="Unduli Senadheera" id="profileImg"
+               onerror="this.closest('.photo-frame').classList.add('photo-frame--empty')">
+          <span class="photo-placeholder-text">Add profile-photo.jpg<br>to assets/img/</span>
+        </div>
+        <ul class="corner-tags">
+          <li>English &amp; Sinhala — fluent</li>
+          <li>Based in Sri Lanka</li>
+        </ul>
+      </div>
+      <div class="about-copy">
+        <h2>Profile</h2>
+        <p>I'm a third-year Mechanical Engineering undergraduate specialising in the Aeronautical
+          Stream at the University of Moratuwa. My project work spans aerodynamic design and
+          analysis, CAD (SolidWorks, XFOIL/XFLR5, ANSYS), composite and precision manufacturing,
+          and reverse engineering &amp; materials identification — with enough electronics and
+          automation experience (Python, C++, Arduino/ESP32) to take a system from concept to a
+          working prototype.</p>
+        <p>Outside the workshop and the wind tunnel, I lead and communicate: I've held roles across
+          several engineering student chapters, compered events, and represented my department in
+          national public-speaking finals.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">3.91</span>
+            <span class="stat-label">CGPA (Sem 1–4)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Major projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">7+</span>
+            <span class="stat-label">Chapters &amp; committees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section section--alt" id="education">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;02 — EDUCATION</p>
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">2024 — Present</span>
+        <div class="timeline-body">
+          <h3>BSc (Hons) in Mechanical Engineering — Aeronautical Stream</h3>
+          <p class="timeline-org">University of Moratuwa</p>
+          <p>CGPA (up to Semester 4): <strong>3.91</strong> · Dean's List — Semesters 1, 2, 3, 4</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2022</span>
+        <div class="timeline-body">
+          <h3>G.C.E. Advanced Level</h3>
+          <p class="timeline-org">St. Joseph's Balika Vidyalaya, Kegalle</p>
+          <p>Z-score: <strong>2.1481</strong> — Combined Mathematics (A), Chemistry (A), Physics (B) ·
+            Island rank 694</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2019</span>
+        <div class="timeline-body">
+          <h3>G.C.E. Ordinary Level</h3>
+          <p class="timeline-org">St. Joseph's Balika Vidyalaya, Kegalle</p>
+          <p>9 A's (Distinction passes)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;03 — SKILLS</p>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-col">
+        <h3>Technical &amp; Software</h3>
+        <ul class="chip-list">
+          <li>Aerodynamic analysis (XFOIL, XFLR5)</li>
+          <li>CAD &amp; 3D modelling (SolidWorks)</li>
+          <li>Basic FEA (ANSYS)</li>
+          <li>Composite manufacturing (carbon fibre)</li>
+          <li>Machining, welding &amp; workshop practice</li>
+          <li>Electronics &amp; automation (Arduino, ESP32)</li>
+          <li>Programming — Python, C++, MATLAB</li>
+          <li>Microsoft Office</li>
+        </ul>
+      </div>
+      <div class="skills-col">
+        <h3>Professional</h3>
+        <ul class="chip-list chip-list--outline">
+          <li>Leadership</li>
+          <li>Public speaking &amp; compering</li>
+          <li>Programme management</li>
+          <li>Teamwork &amp; collaboration</li>
+          <li>Critical thinking &amp; problem solving</li>
+          <li>English &amp; Sinhala (fluent)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section section--alt" id="projects">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;04 — PROJECTS</p>
+    <h2>Projects</h2>
+    <p class="section-intro">Five builds across aerodynamics, composites, mechatronics, and
+      manufacturing. Photos to follow — placeholders are marked below.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="pc-header">
+          <span class="pc-partno">PART&nbsp;NO. PRJ-01</span>
+          <span class="pc-rev">REV — DEC 2025</span>
+        </div>
+        <div class="project-media">
+          <img src="assets/img/project-glider.jpg" alt="Glider Aerodynamic Design project"
+               onerror="this.parentElement.classList.add('project-media--empty')">
+          <span class="media-placeholder-text">ADD PHOTO<br>project-glider.jpg</span>
+          <span class="fig-caption">FIG. 1 — AIRFRAME</span>
+        </div>
+        <div class="project-body">
+          <h3>Glider Aerodynamic Design</h3>
+          <table class="spec-table">
+            <tr><th>Role</th><td>Aerodynamics &amp; CAD — Group Project</td></tr>
+            <tr><th>Duration</th><td>Sep 2025 – Dec 2025</td></tr>
+            <tr><th>Category</th><td>Aerodynamics / Manufacturing</td></tr>
+          </table>
+          <p>Designed, analysed, and manufactured a 60&nbsp;g small-scale glider optimised for a
+            10&nbsp;m/s cruise speed, focused on aerodynamic performance and structural stability.</p>
+          <p class="features-label">Key Features</p>
+          <ul>
+            <li>Aerodynamic analysis and airfoil selection using MATLAB and XFOIL</li>
+            <li>Wing and tail placement for static stability via XFLR5</li>
+            <li>Fuselage design in SolidWorks</li>
+            <li>Laminated wing and tail skins with heat-shrink covering film</li>
+          </ul>
+          <div class="project-tags">
+            <span>XFOIL</span><span>XFLR5</span><span>MATLAB</span><span>SolidWorks</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="pc-header">
+          <span class="pc-partno">PART&nbsp;NO. PRJ-02</span>
+          <span class="pc-rev">REV — ONGOING</span>
+        </div>
+        <div class="project-media">
+          <img src="assets/img/project-falconee.jpg" alt="Falcon E Racing Formula Student project"
+               onerror="this.parentElement.classList.add('project-media--empty')">
+          <span class="media-placeholder-text">ADD PHOTO<br>project-falconee.jpg</span>
+          <span class="fig-caption">FIG. 1 — AERO PACKAGE</span>
+        </div>
+        <div class="project-body">
+          <h3>Falcon E Racing — Formula Student</h3>
+          <table class="spec-table">
+            <tr><th>Role</th><td>Aerodynamics Subsystem — Selected Member</td></tr>
+            <tr><th>Duration</th><td>Dec 2025 – Present</td></tr>
+            <tr><th>Category</th><td>Motorsport / Composites</td></tr>
+          </table>
+          <p>Selected team member for Formula Student Spain 2026, contributing to the
+            aerodynamics subsystem.</p>
+          <p class="features-label">Key Features</p>
+          <ul>
+            <li>Designed the rear-wing mounting bracket to satisfy FS Rulebook 2026 compliance</li>
+            <li>Manufactured the front wing, rear wing, side/rear diffusers, and body panels in
+              carbon fibre using wet-layup vacuum bagging</li>
+            <li>Currently designing the rear wing for the next car, E3</li>
+          </ul>
+          <div class="project-tags">
+            <span>SolidWorks</span><span>Carbon Fibre</span><span>Vacuum Bagging</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="pc-header">
+          <span class="pc-partno">PART&nbsp;NO. PRJ-03</span>
+          <span class="pc-rev">REV — MAY 2025</span>
+        </div>
+        <div class="project-media">
+          <img src="assets/img/project-smartcook.jpg" alt="Smart Cooking System project"
+               onerror="this.parentElement.classList.add('project-media--empty')">
+          <span class="media-placeholder-text">ADD PHOTO<br>project-smartcook.jpg</span>
+          <span class="fig-caption">FIG. 1 — SYSTEM ASSEMBLY</span>
+        </div>
+        <div class="project-body">
+          <h3>Smart Cooking System</h3>
+          <table class="spec-table">
+            <tr><th>Role</th><td>Embedded Systems &amp; Calibration — Group Project</td></tr>
+            <tr><th>Duration</th><td>Jan 2025 – May 2025</td></tr>
+            <tr><th>Category</th><td>Mechatronics / IoT</td></tr>
+          </table>
+          <p>Semi-automated smart cooking system paired with a mobile app, communicating over
+            Bluetooth across devices.</p>
+          <p class="features-label">Key Features</p>
+          <ul>
+            <li>Built an Arduino / .NET MAUI system that measures a curry's main ingredient by
+              load cell, then dispenses proportional spices, water, and coconut milk</li>
+            <li>Calibrated the load cell; coded mass-measurement and dosing logic</li>
+            <li>Integrated the system with ESP32 and Arduino; Bluetooth link via HC-05</li>
+          </ul>
+          <div class="project-tags">
+            <span>Arduino</span><span>ESP32</span><span>.NET MAUI</span><span>HX711</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="pc-header">
+          <span class="pc-partno">PART&nbsp;NO. PRJ-04</span>
+          <span class="pc-rev">REV — MAY 2025</span>
+        </div>
+        <div class="project-media">
+          <img src="assets/img/project-scooter.jpg" alt="Kick Scooter Manufacturing project"
+               onerror="this.parentElement.classList.add('project-media--empty')">
+          <span class="media-placeholder-text">ADD PHOTO<br>project-scooter.jpg</span>
+          <span class="fig-caption">FIG. 1 — CHASSIS</span>
+        </div>
+        <div class="project-body">
+          <h3>Kick Scooter Manufacturing</h3>
+          <table class="spec-table">
+            <tr><th>Role</th><td>Materials Selection &amp; Fabrication — Group Project</td></tr>
+            <tr><th>Duration</th><td>Jan 2025 – May 2025</td></tr>
+            <tr><th>Category</th><td>Manufacturing</td></tr>
+          </table>
+          <p>Designed and fabricated a kick scooter from scratch in the university workshops.</p>
+          <p class="features-label">Key Features</p>
+          <ul>
+            <li>Selected materials per component for functionality, cost, and manufacturability</li>
+            <li>Hands-on machining, welding, and woodworking through the build</li>
+          </ul>
+          <div class="project-tags">
+            <span>Machining</span><span>Welding</span><span>Woodworking</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="pc-header">
+          <span class="pc-partno">PART&nbsp;NO. PRJ-05</span>
+          <span class="pc-rev">REV — ONGOING</span>
+        </div>
+        <div class="project-media">
+          <img src="assets/img/project-mixer.jpg" alt="Hand Mixer Reverse Engineering project"
+               onerror="this.parentElement.classList.add('project-media--empty')">
+          <span class="media-placeholder-text">ADD PHOTO<br>project-mixer.jpg</span>
+          <span class="fig-caption">FIG. 1 — TEARDOWN</span>
+        </div>
+        <div class="project-body">
+          <h3>Reverse Engineering — Hand Mixer</h3>
+          <table class="spec-table">
+            <tr><th>Role</th><td>Materials Analysis &amp; CAD — Group Project</td></tr>
+            <tr><th>Duration</th><td>Jan 2026 – May 2026</td></tr>
+            <tr><th>Category</th><td>Reverse Engineering / DFM</td></tr>
+          </table>
+          <p>Reverse-engineered a hand mixer to identify materials, manufacturing process, and
+            opportunities for improvement.</p>
+          <p class="features-label">Key Features</p>
+          <ul>
+            <li>Identified housing material as ABS plastic through lab material testing</li>
+            <li>Modelled the housing design in SolidWorks</li>
+            <li>Identified feasible manufacturing methods for the housing</li>
+            <li>Proposed ergonomic design improvements</li>
+          </ul>
+          <div class="project-tags">
+            <span>Materials Testing</span><span>SolidWorks</span><span>DFM</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+<section class="section" id="leadership">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;05 — LEADERSHIP &amp; EXTRACURRICULAR</p>
+    <h2>Leadership &amp; Extracurricular</h2>
+    <div class="leadership-grid">
+      <ul class="leadership-list">
+        <li><strong>Affiliated Student Member</strong> — Institution of Mechanical Engineers (IMechE)</li>
+        <li><strong>Team Member, Aerodynamics Subsystem</strong> — Falcon E Racing, University of Moratuwa <span>(2025 – Present)</span></li>
+        <li><strong>Editorial Pillar Head</strong> — IMechE Student Chapter, University of Moratuwa <span>(2025/26)</span></li>
+        <li><strong>Volunteering Member</strong> — IEEE Student Branch of University of Moratuwa <span>(2024 – 2026)</span>
+          <ul>
+            <li>Financial Committee Member — Mora Foresight 2.0 &amp; 3.0 (2024/25)</li>
+            <li>Selection Committee Lead — Mora Foresight 4.0 (2026)</li>
+            <li>Editorial Committee Member — MERCon 2025</li>
+          </ul>
+        </li>
+        <li><strong>Member, Mora Wings (Compering)</strong> — IESL Student Chapter, University of Moratuwa <span>(2025/26)</span></li>
+        <li><strong>Editorial Pillar Member</strong> — Robotics &amp; Automation Student Chapter, IEEE <span>(2024/25)</span></li>
+        <li><strong>Financial Committee Member</strong> — Leo Club, University of Moratuwa <span>(2024/25)</span></li>
+        <li><strong>Rotaractor</strong> — Rotaract Club of University of Moratuwa <span>(Inducted 2025)</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section section--alt" id="achievements">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;06 — ACHIEVEMENTS</p>
+    <h2>Achievements</h2>
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <span class="project-code">AWD-01</span>
+        <h3>Dean's List</h3>
+        <p>Semesters 1, 2, 3, and 4 — University of Moratuwa.</p>
+      </div>
+      <div class="achievement-card">
+        <span class="project-code">AWD-02</span>
+        <h3>Speak Out for Engineering (SOFE) 2025</h3>
+        <p class="project-meta">Sri Lankan Finalist — IMechE Sri Lanka</p>
+        <p>Topic: <em>"Nature is the Blueprint of Engineering"</em> (Biomimicry). Presented case
+          studies including Velcro (burdock burrs), humpback-whale-flipper-inspired wind turbine
+          blades, mangrove/coral-root soil anchoring, and termite-mound smart ventilation.</p>
+      </div>
+      <div class="achievement-card">
+        <span class="project-code">AWD-03</span>
+        <h3>Speech Olympiad XVII</h3>
+        <p>Reserve Finalist — Gavel Club of University of Moratuwa (2024).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <p class="sheet-label">SHEET&nbsp;07 — CONTACT</p>
+    <h2>Let's talk</h2>
+    <p class="section-intro">Open to internships, research collaborations, and Formula
+      Student / aerospace conversations.</p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:lakshauduli@gmail.com">
+        <span class="tb-label">Email</span>
+        <span class="tb-value">lakshauduli@gmail.com</span>
+      </a>
+      <a class="contact-item" href="tel:+94765363127">
+        <span class="tb-label">Phone</span>
+        <span class="tb-value">+94 76 536 3127</span>
+      </a>
+      <a class="contact-item" href="#" id="linkedinLink" target="_blank" rel="noopener">
+        <span class="tb-label">LinkedIn</span>
+        <span class="tb-value">Connect on LinkedIn</span>
+      </a>
+      <a class="contact-item" href="#" id="githubLink" target="_blank" rel="noopener">
+        <span class="tb-label">GitHub</span>
+        <span class="tb-value">View repositories</span>
+      </a>
+    </div>
+    <p class="contact-note">References available on request.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p>&copy; <span id="year">2026</span> Unduli Senadheera. Built with drafting precision.</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
