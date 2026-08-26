@@ -24,9 +24,11 @@ portfolio/
 
 ## Before you publish — please check these
 
-1. **Photos** — Add your real photos to `assets/img/` using the filenames
-   listed in `assets/img/README.md`. The site shows clean placeholders
-   until then, so it's safe to publish before every photo is ready.
+1. **Photos** — The glider gallery uses the committed files in
+   `assets/img/30cm glider project/`, and the SOFE gallery uses
+   `assets/img/Sofe/`. The remaining project cards intentionally show
+   placeholders until matching files are added with the filenames listed
+   in `assets/img/README.md`.
 
 2. **Social links** — Open `js/script.js` and replace the two placeholder
    URLs (`YOUR-LINKEDIN-HANDLE`, `YOUR-GITHUB-USERNAME`) with your real
@@ -57,7 +59,8 @@ portfolio/
    ```
 3. On GitHub: go to the repo → **Settings → Pages** → under "Build and
    deployment", set **Source** to `Deploy from a branch`, branch `main`,
-   folder `/ (root)` → **Save**.
+   folder `/ (root)` → **Save**. Confirm that the Pages workflow is using
+   this repository's `main` branch, not an older `gh-pages` branch.
 4. Your site will be live at:
    `https://YOUR-USERNAME.github.io/unduli-portfolio/`
    (GitHub takes a minute or two to build it the first time.)
