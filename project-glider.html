@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glider Aerodynamic Design | Unduli Senadheera</title>
+  <meta name="description" content="Detailed workflow for Unduli Senadheera's 30 cm wingspan glider aerodynamic design project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Back to Unduli Senadheera portfolio">
+        <span class="brand-mark">U.S.</span>
+        <span class="brand-name">Unduli Senadheera</span>
+      </a>
+      <nav class="main-nav project-nav">
+        <a href="index.html#about">Profile</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero">
+      <div class="section-inner">
+        <a class="back-link" href="index.html#projects">&larr; Back to projects</a>
+        <p class="sheet-label">PROJECT PRJ-01 / DETAILED WORKFLOW</p>
+        <h1>Glider Aerodynamic Design</h1>
+        <p class="project-hero-lead">Design, analysis, and manufacture of a 30 cm wingspan glider optimised for a 10 m/s flight speed under low Reynolds number conditions.</p>
+        <div class="project-hero-meta">
+          <span>Sep 2025 - Dec 2025</span>
+          <span>Aerodynamics / CAD / Manufacturing</span>
+          <span>Group project</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-content">
+      <div class="section-inner">
+        <div class="project-content-grid">
+          <aside class="project-sidebar">
+            <div class="project-index-card">
+              <span class="tb-label">Project file</span>
+              <strong>PRJ-01</strong>
+              <span class="tb-label">Primary tools</span>
+              <span>XFOIL / MATLAB / XFLR5 / SolidWorks</span>
+              <span class="tb-label">Outcome</span>
+              <span>Lightweight glider airframe with thermoformed wing and tail skins</span>
+            </div>
+          </aside>
+
+          <div class="project-article">
+            <section class="detail-section detail-section--first">
+              <h2>Overview</h2>
+              <p>This project focuses on the design, analysis, and development of a <strong>30 cm wingspan glider</strong> optimised for a flight speed of <strong>10 m/s</strong>. The objective was to achieve efficient aerodynamic performance under <strong>low Reynolds number conditions</strong>, typical for small-scale gliders.</p>
+              <p>The workflow integrated aerodynamic theory, computational tools, CAD development, and practical manufacturing considerations. The final design was taken from airfoil selection through to a lightweight physical airframe and flight testing.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>Design Parameters</h2>
+              <div class="parameter-table-wrap">
+                <table class="parameter-table">
+                  <tr><th>Parameter</th><th>Value</th></tr>
+                  <tr><td>Wingspan (b)</td><td>0.4 m</td></tr>
+                  <tr><td>Mass (m)</td><td>0.04 kg</td></tr>
+                  <tr><td>Flight speed (V)</td><td>10 m/s</td></tr>
+                  <tr><td>Aspect ratio (AR)</td><td>6</td></tr>
+                  <tr><td>Air density (&rho;)</td><td>1.184 kg/m&sup3;</td></tr>
+                  <tr><td>Dynamic viscosity (&mu;)</td><td>1.8515 &times; 10<sup>-5</sup> Pa&middot;s</td></tr>
+                </table>
+              </div>
+              <p>Derived values:</p>
+              <ul>
+                <li>Wing area (S) = 0.02667 m&sup2;</li>
+                <li>Mean chord (c) = 0.06667 m</li>
+                <li>Reynolds number calculated for the operating conditions</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Project Workflow</h2>
+              <ol class="workflow-list">
+                <li><strong>Define the operating target.</strong> Established the 10 m/s flight speed, target mass, wingspan, aspect ratio, and low-Reynolds-number operating environment.</li>
+                <li><strong>Screen candidate airfoils.</strong> Used XFOIL to compare lift coefficient, drag coefficient, lift-curve linearity, drag behaviour, and manufacturability.</li>
+                <li><strong>Evaluate candidates in MATLAB.</strong> Processed the aerodynamic data and compared candidate performance around the intended angle of attack.</li>
+                <li><strong>Complete the 3D aerodynamic study.</strong> Used XFLR5 to assess the full wing, stability, and flight characteristics before committing to the final geometry.</li>
+                <li><strong>Develop the CAD model.</strong> Integrated the selected airfoil into the wing and tail geometry and modelled the fuselage in SolidWorks.</li>
+                <li><strong>Manufacture the airframe.</strong> Laser-cut the airfoil-shaped fuselage formers and wing ribs from 3 mm plywood, then assembled and aligned the structure with super glue.</li>
+                <li><strong>Form the lifting surfaces.</strong> Applied thermoform covering film over the rib structures. Heating and stretching the film produced the required wing and tail skin surfaces while keeping the build lightweight.</li>
+                <li><strong>Inspect and test.</strong> Checked alignment, rigidity, surface finish, and aerodynamic shape before flight testing the completed glider.</li>
+              </ol>
+            </section>
+
+            <section class="detail-section">
+              <h2>Airfoil Selection Methodology</h2>
+              <p>Airfoil selection was based on aerodynamic performance at low Reynolds numbers, where flow behaviour becomes sensitive and conventional airfoils can underperform.</p>
+              <h3>Evaluation criteria</h3>
+              <ul>
+                <li>Lift coefficient (Cl)</li>
+                <li>Drag coefficient (Cd)</li>
+                <li>Cl versus angle of attack (&alpha;) linearity</li>
+                <li>Drag behaviour near operating conditions</li>
+                <li>Manufacturability</li>
+              </ul>
+              <h3>Initial screening</h3>
+              <p>AG14 and AG19 were first analysed using XFOIL. Both showed good lift-curve linearity and stable drag characteristics. AG19 produced higher lift but presented manufacturing challenges because of its geometry.</p>
+              <h3>Comparative analysis</h3>
+              <p>Additional low-Reynolds-number airfoils were evaluated: MH32, SD7032, S3021, SD7037, SD7043, SD7080, and SD7084. Performance comparisons at &alpha; = 2&deg; highlighted the differences in lift and drag behaviour.</p>
+              <h3>Final selection</h3>
+              <p><strong>SD7032</strong> was selected for its relatively high lift coefficient at low angles of attack, acceptable drag performance, proven low-Reynolds-number effectiveness, and better manufacturability than the AG series.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>Analysis and Design Development</h2>
+              <ul>
+                <li>XFOIL was used for 2D airfoil analysis and Cl-&alpha; / Cd-&alpha; curve evaluation.</li>
+                <li>MATLAB was used for calculations, data processing, and performance comparison.</li>
+                <li>XFLR5 was used for 3D wing analysis, stability checks, and flight characteristic assessment.</li>
+                <li>SolidWorks was used to model the selected airfoil, wing, tail, fuselage, and final glider assembly.</li>
+                <li>Structural and aerodynamic requirements were balanced to keep the final configuration lightweight and practical to build.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Manufacturing Process</h2>
+              <p>Every airfoil-shaped fuselage former and wing rib was laser-cut from <strong>3 mm plywood</strong>. The parts were assembled carefully with <strong>super glue</strong>, maintaining the correct spacing, alignment, and rigidity throughout the fuselage and lifting-surface structures.</p>
+              <p>For the wing and tail skins, a <strong>thermoform covering film</strong> was placed over the rib structures. By heating and stretching the film across the ribs, it adhered to the framework and produced the essential airfoil shape. This method maintained the intended profile while creating a smooth, lightweight skin with a practical workshop process.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>Key Takeaways</h2>
+              <ul>
+                <li>Low-Reynolds-number aerodynamics requires airfoils selected for the actual operating regime.</li>
+                <li>Linear lift behaviour is important for predictable and stable flight.</li>
+                <li>Airfoil selection is a trade-off between aerodynamic performance and manufacturability.</li>
+                <li>Computational tools improve design accuracy when paired with practical testing.</li>
+                <li>Accurate rib alignment and skin tension are critical to preserving the designed airfoil geometry.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <div class="detail-heading-row">
+                <div>
+                  <p class="sheet-label">MEDIA ARCHIVE</p>
+                  <h2>Gallery</h2>
+                </div>
+                <span class="media-count">8 images / 1 video</span>
+              </div>
+              <div class="media-gallery media-gallery--large">
+                <figure><img src="assets/img/30cm glider project/1.jpg" alt="Glider airframe view 1"><figcaption>Airframe / 01</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/2.jpg" alt="Glider airframe view 2"><figcaption>Airframe / 02</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/3.jpg" alt="Glider airframe view 3"><figcaption>Airframe / 03</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/4.jpg" alt="Glider airframe view 4"><figcaption>Airframe / 04</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/5.jpg" alt="Glider airframe view 5"><figcaption>Airframe / 05</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/6.jpg" alt="Glider airframe view 6"><figcaption>Airframe / 06</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/7.jpg" alt="Glider airframe view 7"><figcaption>Airframe / 07</figcaption></figure>
+                <figure><img src="assets/img/30cm glider project/8.jpg" alt="Glider airframe view 8"><figcaption>Airframe / 08</figcaption></figure>
+              </div>
+            </section>
+
+            <section class="detail-section testing-media">
+              <div class="detail-heading-row">
+                <div>
+                  <p class="sheet-label">TEST RECORD</p>
+                  <h2>Glider Flight Testing</h2>
+                </div>
+              </div>
+              <p>Recorded testing video of the completed glider.</p>
+              <video controls preload="metadata" poster="assets/img/30cm glider project/1.jpg">
+                <source src="assets/img/30cm glider project/9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>&copy; <span id="year">2026</span> Unduli Senadheera.</p>
+      <a href="index.html#projects" class="back-to-top">Back to projects &rarr;</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
