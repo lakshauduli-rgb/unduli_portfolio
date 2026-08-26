@@ -447,17 +447,6 @@ h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
   background-image:
     repeating-linear-gradient(45deg, var(--blue-line-soft) 0, var(--blue-line-soft) 1px, transparent 1px, transparent 12px);
 }
-.fig-caption {
-  position: absolute;
-  left: 0; bottom: 0;
-  background: rgba(10, 31, 51, 0.82);
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  padding: 0.3rem 0.6rem;
-}
-
 .project-body { padding: 1.4rem 1.5rem 1.6rem; }
 .project-code {
   font-family: var(--font-mono);
