@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Cooking System | Unduli Senadheera</title>
+  <meta name="description" content="Detailed development workflow for Unduli Senadheera's Smart Self Cooking Kitchen System project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Back to Unduli Senadheera portfolio">
+        <span class="brand-mark">U.S.</span>
+        <span class="brand-name">Unduli Senadheera</span>
+      </a>
+      <nav class="main-nav project-nav">
+        <a href="index.html#about">Profile</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero">
+      <div class="section-inner">
+        <a class="back-link" href="index.html#projects">&larr; Back to projects</a>
+        <h1>Smart Cooking System</h1>
+        <p class="project-hero-lead">A semi-automated kitchen system that measures ingredients, dispenses recipe quantities, controls cooking, and communicates with a mobile application.</p>
+        <div class="project-hero-meta">
+          <span>Jan 2025 - May 2025</span>
+          <span>Mechatronics / IoT</span>
+          <span>Group project</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-content">
+      <div class="section-inner">
+        <div class="project-content-grid">
+          <aside class="project-sidebar">
+            <div class="project-index-card">
+              <span class="tb-label">Project file</span>
+              <strong>PRJ-03</strong>
+              <span class="tb-label">Primary platform</span>
+              <span>Mobile app / ESP32 / Arduino</span>
+              <span class="tb-label">Project type</span>
+              <span>Group project</span>
+              <span class="tb-label">My contribution</span>
+              <span>Embedded hardware, load-cell calibration, dosing logic, and Bluetooth integration</span>
+              <span class="tb-label">My role</span>
+              <span>Embedded systems and calibration developer</span>
+              <span class="tb-label">Status</span>
+              <span>Completed</span>
+            </div>
+          </aside>
+
+          <div class="project-article">
+            <section class="detail-section detail-section--first">
+              <h2>Overview</h2>
+              <p>The Smart Self Cooking Kitchen System was developed as a group project for <strong>ME 2041</strong>. Its purpose was to automate key stages of cooking: ingredient measurement, ingredient dispensing, heating, stirring, temperature maintenance, and automatic shutdown.</p>
+              <p>The system combines a mobile user interface with a distributed embedded control system. A user selects a food category, recipe, and quantity through the app, while the hardware coordinates the measuring, dispensing, and cooking sequence.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>My Contribution</h2>
+              <p>I contributed to the embedded hardware and calibration side of the project. My work focused on load-cell-based ingredient measurement, the dosing logic used to calculate and release quantities, and the integration of the ESP32 and Arduino control hardware.</p>
+              <ul>
+                <li>Calibrated the load-cell measurement system for ingredient weighing.</li>
+                <li>Developed mass-measurement and proportional dosing logic.</li>
+                <li>Worked with Arduino and ESP32 hardware integration.</li>
+                <li>Supported communication between the mobile interface and the controller system.</li>
+                <li>Contributed to testing the actuator and ingredient-container mechanisms.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>System Architecture</h2>
+              <ul>
+                <li><strong>Mobile application:</strong> Provides food category, recipe, quantity selection, and cooking controls.</li>
+                <li><strong>ESP32:</strong> Receives commands from the mobile application over Wi-Fi and passes control data into the embedded system.</li>
+                <li><strong>Master Arduino:</strong> Coordinates the overall cooking sequence and communicates with the slave controllers.</li>
+                <li><strong>Spice slave Arduino:</strong> Controls the stepper motor and screw mechanism used for spice dispensing.</li>
+                <li><strong>Liquid slave Arduino:</strong> Controls pumps and monitors the liquid dispensing system.</li>
+                <li><strong>Actuators and sensors:</strong> Linear actuators, stepper motors, pumps, ultrasonic sensors, a float switch, load cell, hot plate, stirrer, and K-type thermocouple support the physical process.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Development Process</h2>
+              <ol class="workflow-list">
+                <li><strong>Define the cooking objective.</strong> Broke the cooking task into measurable and controllable stages: weighing, dispensing, heating, stirring, temperature maintenance, and shutdown.</li>
+                <li><strong>Design the user workflow.</strong> Structured the mobile interaction around pairing, recipe selection, quantity selection, dispensing, and cooking commands.</li>
+                <li><strong>Build the measurement stage.</strong> Placed the empty pot on the measuring area and used the load-cell system to establish the required ingredient quantity.</li>
+                <li><strong>Develop the controller hierarchy.</strong> Connected the mobile app to the ESP32, then used the ESP32, master Arduino, and slave Arduinos to distribute control tasks.</li>
+                <li><strong>Develop dispensing mechanisms.</strong> Used a stepper-and-screw mechanism for spices, pumps for liquids, and actuators for the ingredient containers.</li>
+                <li><strong>Add feedback and safety checks.</strong> Monitored spice and liquid levels with ultrasonic sensors, used a float switch in the liquid system, and included refill prompts when supplies were low.</li>
+                <li><strong>Integrate cooking control.</strong> Coordinated the hot plate, ingredient release, stirrer, and K-type thermocouple so the system could maintain the intended cooking sequence until the recipe time expired.</li>
+                <li><strong>Test and refine the hardware.</strong> Tested the actuator with Arduino, completed the final ingredient-container design and manufacturing, then assembled the system for demonstration.</li>
+              </ol>
+            </section>
+
+            <section class="detail-section">
+              <h2>Operating Sequence</h2>
+              <ol class="workflow-list">
+                <li>Pair the mobile device with the system.</li>
+                <li>Place an empty pot on the measuring area and restart the system.</li>
+                <li>Select <strong>Cook now</strong>, choose the recipe, and select the required quantity.</li>
+                <li>Measure the ingredients and refill any container flagged as low.</li>
+                <li>Select <strong>Start Dispensing</strong> and wait for the <strong>Dispense complete</strong> message.</li>
+                <li>Select <strong>Cook</strong> to start the hot plate, ingredient release, and stirring sequence.</li>
+                <li>Maintain the cooking temperature until the recipe time expires, then switch the system off automatically.</li>
+              </ol>
+            </section>
+
+            <section class="detail-section">
+              <h2>Control and Sensing</h2>
+              <p>The system was designed around closed-loop awareness of the cooking process. Ingredient quantities were calculated from the selected recipe and measured using the load-cell system. Ultrasonic sensors monitored ingredient levels, while the liquid subsystem also used a float switch. The K-type thermocouple supported temperature monitoring during cooking.</p>
+              <p>The presentation documents the intended sequence and system architecture; it does not provide measured dispensing accuracy, calibration constants, temperature targets, or quantified performance results.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>Key Takeaways</h2>
+              <ul>
+                <li>Large mechatronic systems become easier to develop when control responsibilities are separated across master and slave controllers.</li>
+                <li>Accurate measurement and reliable calibration are essential before proportional dispensing can be trusted.</li>
+                <li>Mechanical mechanisms, electronics, software, sensing, and user interaction must be designed as one integrated workflow.</li>
+                <li>Testing individual actuators and container mechanisms early reduces integration risk later.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <div class="detail-heading-row">
+                <div>
+                  <h2>Project Gallery</h2>
+                </div>
+                <span class="media-count">4 images / 1 demo video</span>
+              </div>
+              <div class="media-gallery media-gallery--large">
+                <figure><img src="assets/img/smart cooking/1.jpg" alt="Smart Cooking System project view 1"><figcaption>System / 01</figcaption></figure>
+                <figure><img src="assets/img/smart cooking/2.jpg" alt="Smart Cooking System front view"><figcaption>System / 02</figcaption></figure>
+                <figure><img src="assets/img/smart cooking/3.jpg" alt="Smart Cooking System project view 3"><figcaption>System / 03</figcaption></figure>
+                <figure><img src="assets/img/smart cooking/4.jpg" alt="Smart Cooking System project view 4"><figcaption>System / 04</figcaption></figure>
+              </div>
+            </section>
+
+            <section class="detail-section testing-media">
+              <div class="detail-heading-row">
+                <h2>System Demonstration</h2>
+              </div>
+              <p>Demonstration video of the Smart Cooking System.</p>
+              <video controls preload="metadata" poster="assets/img/smart cooking/2.jpg">
+                <source src="assets/img/smart cooking/demo video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </section>
+
+            <section class="detail-section presentation-download">
+              <h2>Project Presentation</h2>
+              <p>Open the original project presentation to review the system architecture, operating sequence, and development concept.</p>
+              <a class="project-detail-btn" href="assets/img/smart cooking/presentation.pptx" target="_blank" rel="noreferrer">Open project presentation &rarr;</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>&copy; <span id="year">2026</span> Unduli Senadheera.</p>
+      <a href="index.html#projects" class="back-to-top">Back to projects &rarr;</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
