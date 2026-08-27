@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- EDIT ME: social links -------------------------------------------
   // Replace the URLs below with your real LinkedIn / GitHub profile links.
   const SOCIAL_LINKS = {
-    linkedin: 'https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE',
-    github:   'https://github.com/YOUR-GITHUB-USERNAME'
+    linkedin: 'https://www.linkedin.com/in/unduli-senadheera-3271b5200/',
+    github:   'https://github.com/lakshauduli-rgb/30-cm-Wings-Span-Glider-Project'
   };
   // -----------------------------------------------------------------------
 
