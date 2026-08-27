@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Engineering - Hand Mixer | Unduli Senadheera</title>
+  <meta name="description" content="Reverse engineering workflow for the housing of a domestic hand mixer by Unduli Senadheera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Back to Unduli Senadheera portfolio">
+        <span class="brand-mark">U.S.</span>
+        <span class="brand-name">Unduli Senadheera</span>
+      </a>
+      <nav class="main-nav project-nav">
+        <a href="index.html#about">Profile</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero">
+      <div class="section-inner">
+        <a class="back-link" href="index.html#projects">&larr; Back to projects</a>
+        <img class="project-hero-image" src="assets/img/reverse engineer/1.png" alt="Reconstructed hand mixer housing CAD model">
+        <h1>Reverse Engineering - Hand Mixer</h1>
+        <p class="project-hero-lead">A structured reverse-engineering study of a domestic hand mixer housing, combining physical measurement, material identification, CAD reconstruction, and design-for-manufacture analysis.</p>
+        <div class="project-hero-meta">
+          <span>Jan 2026 - May 2026</span>
+          <span>Reverse engineering / DFM</span>
+          <span>Group project</span>
+          <span>Completed</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-content">
+      <div class="section-inner">
+        <div class="project-content-grid">
+          <aside class="project-sidebar">
+            <div class="project-index-card">
+              <span class="tb-label">Project file</span>
+              <strong>PRJ-05</strong>
+              <span class="tb-label">Project type</span>
+              <span>Group project</span>
+              <span class="tb-label">My contribution</span>
+              <span>Reverse-engineered the two-part housing through measurement, ABS identification, CAD reconstruction, and manufacturing analysis</span>
+              <span class="tb-label">My role</span>
+              <span>Reverse engineering and CAD team member</span>
+              <span class="tb-label">Status</span>
+              <span>Completed</span>
+            </div>
+          </aside>
+
+          <div class="project-article">
+            <section class="detail-section detail-section--first">
+              <h2>Overview</h2>
+              <p>This group project reverse-engineered a domestic hand mixer by studying its two-part housing, internal features, material, assembly strategy, and likely manufacturing process. The housing encloses the motor, motor housing, fan, gears, shaft, and beaters while supporting one-handed use and left- or right-handed operation.</p>
+              <p>My main contribution was the reverse engineering of the hand-mixer housing. I analysed the top and bottom shells, planned and carried out dimensional and material investigations, reconstructed the geometry in CAD, and connected the observed features to injection moulding and design-for-manufacture decisions.</p>
+            </section>
+
+            <section class="detail-section">
+              <h2>My Contribution</h2>
+              <ul>
+                <li>Analysed the housing's external geometry, internal features, surface finish, hardness, flexibility, and opacity.</li>
+                <li>Measured the top and bottom shells using vernier calipers, a micrometer screw gauge, and a height gauge.</li>
+                <li>Investigated shell curvature by sectioning the body and measuring thread lengths placed across each section.</li>
+                <li>Identified the housing material as ABS through float testing, Shore D hardness, density measurement, MatWeb comparison, and burn-test observations.</li>
+                <li>Reconstructed the top shell and bottom shell in SolidWorks and prepared the associated 2D drawings and 3D assembly.</li>
+                <li>Inferred injection moulding, parting-line, ejector-pin, boss, draft-angle, and assembly features from the physical parts.</li>
+                <li>Proposed a handle-ergonomics improvement based on the housing study.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Reverse Engineering Workflow</h2>
+              <ol class="workflow-list">
+                <li><strong>Inspect the product.</strong> Studied the housing's geometry, surface finish, hardness, flexibility, opacity, parting line, bosses, and visible assembly features.</li>
+                <li><strong>Measure the shells.</strong> Used conventional workshop instruments to capture key external and internal dimensions of the separate top and bottom housing shells.</li>
+                <li><strong>Capture curvature.</strong> Sectioned the body and used thread laid across each section to estimate curved profiles where direct measurement was difficult.</li>
+                <li><strong>Identify the material.</strong> Combined float testing, Shore D hardness readings, pycnometer density measurement, MatWeb comparison, and qualitative burn testing.</li>
+                <li><strong>Reconstruct the geometry.</strong> Built separate CAD models and drawings for the top and bottom shells, then assembled them into a complete housing model.</li>
+                <li><strong>Infer the manufacturing process.</strong> Used parting lines, ejector marks, bosses, rounded edges, draft angles, integrated text, and surface finish to identify injection moulding as the most likely process.</li>
+                <li><strong>Assess design and manufacturing.</strong> Considered mould construction, ABS processing, shrinkage, residual stress, directional strength, surface gloss, thread formation, and feasible handle improvements.</li>
+              </ol>
+            </section>
+
+            <section class="detail-section">
+              <h2>Material Identification</h2>
+              <p>Both housing shells were hard, opaque polymers with smooth glossy outer surfaces. They sank in water, indicating a density greater than water. Detailed testing recorded Shore D readings of approximately <strong>78-80</strong> for the top shell and <strong>59-65</strong> for the bottom shell.</p>
+              <p>Pycnometer measurements recorded densities of approximately <strong>1.068 g/cm&sup3;</strong> for the top shell and <strong>1.092 g/cm&sup3;</strong> for the bottom shell. Comparison with reference data and burn-test observations supported the conclusion that both shells were made from <strong>ABS plastic</strong>.</p>
+              <ul>
+                <li>Float test: both samples sank in water.</li>
+                <li>Hardness test: separate Shore D readings were taken across both shells.</li>
+                <li>Density test: pycnometer measurements supported the polymer comparison.</li>
+                <li>Burn test: moderate burning, molten dripping, bright yellow/orange flame, pungent smell, black smoke, and continued burning after flame removal.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Housing CAD and Manufacturing Analysis</h2>
+              <ul>
+                <li>Created separate reconstructed CAD models for the top shell and bottom shell.</li>
+                <li>Produced 2D drawings and a 3D assembly showing how the shells fit together.</li>
+                <li>Identified injection moulding as the most likely housing manufacturing process.</li>
+                <li>Used the visible parting line on the top shell and ejector-pin marks on the bottom shell as process evidence.</li>
+                <li>Recognised bosses, rounded edges, draft angles, and integrated text as features consistent with moulded production parts.</li>
+                <li>Inferred ABS melt temperatures of approximately 200-250 &deg;C and mould temperatures of approximately 50-80 &deg;C from the report's process discussion.</li>
+                <li>Identified formed boss threads and self-tapping screws as the likely assembly method.</li>
+              </ul>
+            </section>
+
+            <section class="detail-section">
+              <h2>Limitations and Improvements</h2>
+              <p>Conventional contact measurements were practical for the project, but optical 3D scanning or a coordinate-measuring machine could capture complex curvature more accurately. The investigation focused on dimensional and material identification; it did not include functional mixer testing, mould fabrication, or a manufactured CAD prototype.</p>
+              <p>The housing study also informed a handle-ergonomics improvement proposal, linking reverse engineering with an opportunity to improve comfort and usability while preserving the core manufacturing approach.</p>
+            </section>
+
+            <section class="detail-section">
+              <div class="detail-heading-row">
+                <h2>Project Documents</h2>
+                <span class="media-count">2 technical documents</span>
+              </div>
+              <div class="document-links">
+                <a class="project-detail-btn" href="assets/img/reverse engineer/presentation.pptx" target="_blank" rel="noreferrer">Open project presentation &rarr;</a>
+                <a class="project-detail-btn" href="assets/img/reverse engineer/Hand_mixer_G3.pdf" target="_blank" rel="noreferrer">Open final technical report &rarr;</a>
+              </div>
+            </section>
+
+            <section class="detail-section">
+              <div class="detail-heading-row">
+                <h2>Project Gallery</h2>
+                <span class="media-count">Housing reconstruction</span>
+              </div>
+              <div class="media-gallery media-gallery--large">
+                <figure><img src="assets/img/reverse engineer/1.png" alt="Hand mixer housing CAD reconstruction"><figcaption>Housing CAD / 01</figcaption></figure>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>&copy; <span id="year">2026</span> Unduli Senadheera.</p>
+      <a href="index.html#projects" class="back-to-top">Back to projects &rarr;</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
