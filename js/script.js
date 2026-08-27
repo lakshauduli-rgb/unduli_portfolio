@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Replace the URLs below with your real LinkedIn / GitHub profile links.
   const SOCIAL_LINKS = {
     linkedin: 'https://www.linkedin.com/in/unduli-senadheera-3271b5200/',
-    github:   'https://github.com/lakshauduli-rgb/30-cm-Wings-Span-Glider-Project'
+    github:   'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fgithub.com%2Flakshauduli-rgb&urlhash=zdei&mt=YQA3jzmid4ckqjcup6sOpIXUcrYF36LEPe6nlECdaTt-sdPZ-loqn0W8aEzOFmQQwtYPEL1Esb1nesDj3ET6BO_QtBs&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2Fx3ONyRMR%2BWNM7BuqIXmJg%3D%3D'
   };
   // -----------------------------------------------------------------------
 
